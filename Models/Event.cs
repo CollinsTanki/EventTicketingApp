@@ -1,4 +1,5 @@
-﻿using System.Net.Sockets;
+﻿using System;
+using System.Collections.Generic;
 
 namespace EventTicketingApp.Models
 {
@@ -12,7 +13,7 @@ namespace EventTicketingApp.Models
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
         public string ImageUrl { get; set; } = "";
-        public TicketType Status { get; set; } = null!;
+        public EventStatus Status { get; set; } = EventStatus.Draft;
         public List<TicketType> TicketTypes { get; set; } = new();
     }
 }
